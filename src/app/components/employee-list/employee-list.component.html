@@ -1,0 +1,32 @@
+<div class="emp_list">
+  <div class="total">
+    Total of <strong>{{ totalEmployee }} </strong>employees
+  </div>
+  <ng-container *ngIf="empList.length > 0; else notfound">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let emp of empList">
+        <div
+          class="card"
+          style="margin-bottom: 10px; cursor: pointer"
+          (click)="detail(emp.id)"
+        >
+          <div class="middle">
+            <div class="text">{{ emp.first_name + " " + emp.last_name }}</div>
+          </div>
+          <img [src]="emp.avatar" class="card-img-top image" />
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #notfound>
+    <div>No Data to View</div>
+  </ng-template>
+</div>
+<mat-paginator
+  *ngIf="!hidePagination"
+  [length]="totalEmployee"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="pageSizeOptions"
+  (page)="pageChange($event)"
+>
+</mat-paginator>

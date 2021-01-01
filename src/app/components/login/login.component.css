@@ -1,0 +1,16 @@
+.card {
+  border: 1px solid #28a745;
+}
+.card-login {
+  margin-top: 130px;
+  padding: 18px;
+  max-width: 30rem;
+}
+.card-body {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  background-color: #343a40 !important;
+  height: 243px;
+  padding: 66px;
+}
