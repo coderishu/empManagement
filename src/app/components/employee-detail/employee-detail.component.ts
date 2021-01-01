@@ -8,7 +8,13 @@ import { appConstant } from "src/app/constant/app.constant";
   styleUrls: ["./employee-detail.component.css"],
 })
 export class EmployeeDetailComponent implements OnInit {
-  empDetail = {};
+  empDetail = {
+    avatar: "",
+    id: "",
+    first_name: "",
+    last_name: "",
+    email: "",
+  };
   constructor(private service: MainService) {}
 
   ngOnInit() {
@@ -21,4 +27,5 @@ export class EmployeeDetailComponent implements OnInit {
       this.empDetail = result.data;
     });
   }
+  onSubmit() {}
 }
