@@ -15,7 +15,7 @@ import { MainService } from "src/app/services/main.service";
 })
 export class AddEmployeeComponent implements OnInit {
   @ViewChild("fileInput", { static: false }) el: ElementRef;
-  imageUrl: any = "https://i.ibb.co/fDWsn3G/buck.jpg";
+  imageUrl: any = "assets/images/boy.jpg";
   editFile: boolean = true;
   removeUpload: boolean = false;
   model: any = {};
